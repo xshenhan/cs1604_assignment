@@ -1,0 +1,4 @@
+C:\Users\lenovo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8770.66\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/lenovo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/bin/ninja/win/x64/ninja.exe -G Ninja -S "F:\OneDrive - sjtu.edu.cn\Documents\university_life\grade_one_spring\c++\assignment\judger_student\judger_student\source" -B "F:\OneDrive - sjtu.edu.cn\Documents\university_life\grade_one_spring\c++\assignment\judger_student\judger_student\source\cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: F:/OneDrive - sjtu.edu.cn/Documents/university_life/grade_one_spring/c++/assignment/judger_student/judger_student/source/cmake-build-debug

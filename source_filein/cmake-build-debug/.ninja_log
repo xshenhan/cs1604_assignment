@@ -1,0 +1,7 @@
+# ninja log v5
+3	367	7061914693739976	CMakeFiles/source.dir/engine.cpp.obj	7296f6dc37a12050
+1	109	7061919667540849	build.ninja	2d612e36c90181a9
+6	433	7061905306377223	CMakeFiles/source.dir/units.cpp.obj	cb16311c22e0de00
+368	546	7061914695481621	source.exe	62152bf81c5c3f70
+3	340	7061905305435477	CMakeFiles/source.dir/main.cpp.obj	6aca05908e1e7021
+7	614	7061905308164235	CMakeFiles/source.dir/field.cpp.obj	7b642e0e2d617e3e

@@ -10,25 +10,11 @@ int main()
     {
         Field* f = loadMap(cin);
         if (f == NULL) {
-            cout << "Failed to load map!" << endl;
-            return -1;
+            return 0;
         }
         play(*f, cin, cout);
-//        cout << *f << endl;
+
         delete f;
         return 0;
     }
-
-
-    // origin
-//    Field* f = new Field(11, 11);
-//    if (f == NULL) {
-//        cout << "Failed to load map!" << endl;
-//        return -1;
-//    }
-//    play(*f, cin, cout);
-//
-//
-//    delete f;
-//    return 0;
 }

@@ -83,7 +83,8 @@ string getTerrainSymbol(Terrain t)
     case MOUNTAIN:
         return "/\\";
     case WATER:return "~~";
-    default:{}
+    case A:
+        return "\\/";
     }
 
     assert(false);
@@ -175,8 +176,7 @@ void direction2location(const int& original_location_row, const int& original_lo
             new_location_col = original_location_col + 1;
             break;
         }
-        default:
-            assert(false);
+        default:{}
     }
 }
 void init_abass(Field& field){

@@ -1,0 +1,46 @@
+19 4 23 22
+3 3 M
+13 2 W
+16 3 M
+8 0 M
+12 1 F
+9 3 A
+16 0 M
+12 3 A
+0 3 M
+12 3 W
+17 3 M
+17 1 W
+15 3 A
+6 2 W
+13 2 W
+8 3 W
+6 0 F
+6 0 F
+6 2 F
+13 1 A
+1 2 F
+10 2 W
+7 1 W
+11 2 A AR
+8 1 B MG
+13 2 A KN
+17 1 B AR
+2 3 B KN
+1 1 B MG
+15 3 A KN
+17 3 B FT
+12 0 B KN
+18 3 B MG
+13 0 B AR
+0 2 A KN
+18 1 B FT
+0 3 B FT
+4 3 A MG
+7 0 A FT
+2 0 B KN
+6 2 B AR
+2 0 A AR
+0 3 A FT
+0 0 B FT
+4 0 A KN

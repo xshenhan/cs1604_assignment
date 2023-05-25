@@ -9,6 +9,8 @@ bool move(int& row, int& col, int direction, bool player, int& energy, Field& fi
     int m = field.getHeight();
     int n = field.getWidth();
     int nrow, ncol;
+    if (direction == 5)
+        return false;
     direction2location(row, col, direction, nrow, ncol);
     if (nrow < 0 || nrow >= m || ncol < 0 || ncol >= n) {
         return false;
@@ -71,6 +73,8 @@ int getEnergy(UnitType utype){
 
 void normal_attack(int row, int col, int direction, bool player, Field& field){
     int nrow, ncol;
+    if (direction == 5)
+        assert(false);
     direction2location(row, col, direction, nrow, ncol);
     if (nrow >=0 && nrow < field.getHeight() && ncol>=0 && ncol < field.getWidth())
         field.set_unit(nrow, ncol, CLEAR, player);
@@ -127,12 +131,10 @@ void fireball_fly(int row, int col, int direction, Field& field){
 }
 
 void fireball_attack(int row, int col, int direction, Field& field){
-    int nrow, ncol;
     int m = field.getHeight();
     int n = field.getWidth();
-    direction2location(row, col, direction, nrow, ncol);
-    if (nrow >=0 && nrow < m && ncol>=0 && ncol < n && field.getTerrain(nrow, ncol) != MOUNTAIN){
-        fireball_fly(nrow, ncol, direction, field);
+    if (row >=0 && row < m && col>=0 && col < n && field.getTerrain(row, col) != MOUNTAIN){
+        fireball_fly(row, col, direction, field);
     }
 }
 

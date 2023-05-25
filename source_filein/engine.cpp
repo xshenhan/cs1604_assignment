@@ -18,7 +18,12 @@ void play(Field& field, istream& is, ostream& os)
     {
         // Print the new map
         os << field << endl;
-
+        // Check if the game is over
+        if (field.check_win(true)){
+            end = 1;
+        }
+        else if (field.check_win(false)){
+            end = 2;}
         switch (end) {
             case 1 :{
                 cout << "Winner is Player A!" << endl;
@@ -43,6 +48,7 @@ void play(Field& field, istream& is, ostream& os)
 
         int row, col;
         ss>> row >> col;
+        if (row>= 0 && row < field.getHeight() && col >= 0 && col < field.getWidth() && field.getUnit(row, col) != nullptr){
         if (field.getUnit(row, col)->getSide() == side){
         // move
         int energy = getEnergy(field.getUnit(row, col)->getType());
@@ -80,12 +86,7 @@ void play(Field& field, istream& is, ostream& os)
         }
 
 
-        // Check if the game is over
-        if (field.check_win(true)){
-            end = 1;
-        }
-        else if (field.check_win(false)){
-            end = 2;
+
         }}
         side = !side;
         numTurns++;

@@ -28,7 +28,7 @@ public:
 
     void set_terrian(int row, int col, Terrain t);
 
-    bool check_win(bool player) const;
+    int check_win() const;
     // Destructor
     ~Field();
 
@@ -41,6 +41,7 @@ private:
 // Convert a direction to a location
 void direction2location(const int& original_location_row, const int& original_location_col, const int& direction, int& new_location_row, int& new_location_col);
 void init_abass(Field&);
+void init_map(Field& field);
 // Display the field on the out stream os
 std::ostream& operator<<(std::ostream& os, const Field& field);
 

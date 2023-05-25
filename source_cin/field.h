@@ -28,7 +28,7 @@ public:
 
     void set_terrian(int row, int col, Terrain t);
 
-    bool check_win(bool player) const;
+    int check_win() const;
     // Destructor
     ~Field();
 

@@ -53,12 +53,33 @@ Unit* Field::getUnit(int row, int col) const
     return units[row][col];
 }
 // Check if the player wins
-bool Field::check_win(bool player) const{
+/*bool Field::check_win(bool player) const{
     for (int i = 0; i < units.numRows(); i++){
     for (int j = 0; j < units.numCols(); j++){
         if (units[i][j] != nullptr && units[i][j]->getSide() != player)
             return false;}}
     return true;
+}*/
+// 1 for a win ; -1 for b win ; 0 for equal ; 2 for no one win
+int Field::check_win() const {
+    bool a_win = true;
+    bool b_win = true;
+    for (int i = 0; i< units.numRows(); i++) {
+        for (int j = 0; j < units.numCols(); j++) {
+            if (units[i][j] != nullptr) {
+                if (units[i][j]->getSide())
+                    b_win = false;
+                else if (!units[i][j]->getSide())
+                    a_win = false;
+            }
+            if (!(a_win || b_win))
+                return 2;
+        }
+    }
+    if (a_win && b_win)
+        return 0;
+    else
+        return a_win ? 1 : -1;
 }
 
 // Reclaim all the units
@@ -83,7 +104,8 @@ string getTerrainSymbol(Terrain t)
     case MOUNTAIN:
         return "/\\";
     case WATER:return "~~";
-    default:{}
+    case A:
+        return "\\/";
     }
 
     assert(false);
@@ -175,8 +197,7 @@ void direction2location(const int& original_location_row, const int& original_lo
             new_location_col = original_location_col + 1;
             break;
         }
-        default:
-            assert(false);
+        default:{}
     }
 }
 void init_abass(Field& field){
